@@ -38,7 +38,7 @@ var filter = _curry2(_dispatchable(['filter'], _xfilter, function(pred, filterab
   return (
     _isObject(filterable) ?
       _reduce(function(acc, key) {
-        if (pred(filterable[key])) {
+        if (pred(filterable[key],key)) {
           acc[key] = filterable[key];
         }
         return acc;
